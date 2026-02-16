@@ -17,60 +17,10 @@ OpenOA (Open Operational Analysis) is a web application that wraps the [OpenOA P
 
 The application follows a client-server architecture:
 
-```mermaid
-graph LR
-    %% Theme Configuration
-    %% Blue Theme
-    classDef blueFill fill:#E1F5FE,stroke:#0277BD,stroke-width:2px,color:#01579B;
-    classDef darkBlueFill fill:#B3E5FC,stroke:#0277BD,stroke-width:2px,color:#01579B;
-    classDef primaryFill fill:#0288D1,stroke:#01579B,stroke-width:2px,color:#FFFFFF;
-    
-    subgraph Frontend ["Frontend (React + Vite)"]
-        direction TB
-        Dashboard[Dashboard]:::blueFill
-        DataManager[Data Manager]:::blueFill
-        AnalysisPage[Analysis Page]:::blueFill
-        ResultsPanel[Results Panel]:::blueFill
-    end
-    
-    subgraph Backend ["Backend (FastAPI)"]
-        direction TB
-        DataService["data_service.py"]:::darkBlueFill
-        AnalysisService["analysis_service.py"]:::darkBlueFill
-        InMemoryStore["In-Memory Store"]:::darkBlueFill
-    end
-    
-    subgraph OpenOA ["OpenOA Library (v3.2)"]
-        direction TB
-        PlantData[PlantData]:::primaryFill
-        MonteCarloAEP[MonteCarloAEP]:::primaryFill
-        ElectricalLosses[ElectricalLosses]:::primaryFill
-        TurbineEnergy[TurbineLongTermGrossEnergy]:::primaryFill
-        WakeLosses[WakeLosses]:::primaryFill
-    end
-    
-    %% Flows
-    Dashboard --> DataManager
-    DataManager -->|HTTP POST /api/data/*| DataService
-    AnalysisPage -->|HTTP POST /api/analysis/*| AnalysisService
-    DataManager --> AnalysisPage
-    AnalysisPage --> ResultsPanel
-    
-    %% Backend Logic
-    DataService --> InMemoryStore
-    DataService -- creates --> PlantData
-    AnalysisService -- runs --> PlantData
-    AnalysisService -- runs --> MonteCarloAEP
-    AnalysisService -- runs --> ElectricalLosses
-    AnalysisService -- runs --> TurbineEnergy
-    AnalysisService -- runs --> WakeLosses
-    
-    %% Library Internal (Implicit dependencies/data flow)
-    PlantData -.-> MonteCarloAEP
-    PlantData -.-> ElectricalLosses
-    PlantData -.-> TurbineEnergy
-    PlantData -.-> WakeLosses
-```
+<img width="891" height="366" alt="Screenshot 2026-02-16 at 9 43 50 PM" src="https://github.com/user-attachments/assets/15b5597f-7278-48e1-826b-d39c6911d5cf" />
+<img width="891" height="366" alt="Screenshot 2026-02-16 at 9 43 50 PM" src="https://github.com/user-attachments/assets/15b5597f-7278-48e1-826b-d39c6911d5cf" />
+![Uploading Screenshot 2026-02-16 at 9.43.50 PM.png…]()
+![Uploading Screenshot 2026-02-16 at 9.43.50 PM.png…]()
 
 ## 📂 Project Structure
 
