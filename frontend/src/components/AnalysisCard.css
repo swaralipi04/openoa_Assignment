@@ -1,0 +1,65 @@
+.analysis-card {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.analysis-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--card-accent), transparent);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.analysis-card:hover::before {
+    opacity: 1;
+}
+
+.ac-icon {
+    font-size: 2rem;
+}
+
+.ac-abbr {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border: 1px solid;
+}
+
+.ac-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.ac-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    flex: 1;
+}
+
+.ac-action {
+    font-size: 0.85rem;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: all var(--transition-base);
+}
+
+.analysis-card:hover .ac-action {
+    opacity: 1;
+    transform: translateX(0);
+}

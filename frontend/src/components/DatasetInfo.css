@@ -1,0 +1,66 @@
+.dataset-info {
+    margin-top: 1.5rem;
+}
+
+.di-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.di-id-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.di-id {
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+    color: var(--accent-teal);
+}
+
+.di-message {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+
+.di-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.di-cat-chip {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    min-width: 140px;
+}
+
+.di-cat-name {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--accent-blue-light);
+    letter-spacing: 0.04em;
+}
+
+.di-cat-rows {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.di-cat-date {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
