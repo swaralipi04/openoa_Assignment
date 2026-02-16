@@ -18,8 +18,6 @@ OpenOA (Open Operational Analysis) is a web application that wraps the [OpenOA P
 The application follows a client-server architecture:
 
 <img width="891" height="366" alt="Screenshot 2026-02-16 at 9 43 50 PM" src="https://github.com/user-attachments/assets/15b5597f-7278-48e1-826b-d39c6911d5cf" />
-<img width="891" height="366" alt="Screenshot 2026-02-16 at 9 43 50 PM" src="https://github.com/user-attachments/assets/15b5597f-7278-48e1-826b-d39c6911d5cf" />
-![Uploading Screenshot 2026-02-16 at 9.43.50 PM.png…]()
 
 
 ## 📂 Project Structure
