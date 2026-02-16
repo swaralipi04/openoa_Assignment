@@ -143,4 +143,4 @@ To deploy the backend to Google Cloud Run:
 3.  **Update Frontend**: Update `VITE_API_URL` in your frontend configuration to point to the deployed Cloud Run URL.
 
 ---
-*Built with ❤️ for the Wind Energy Community*
+
